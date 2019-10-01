@@ -1,0 +1,40 @@
+extends _layout/layout
+
+block variables
+    -var pageTitle = 'HTML Developer Test Task'
+
+block body
+    form.form-auth(action='#', autocomplete='off')
+        .form-auth__wrapper
+            .form-row
+                input#inputEmail.form-row__input(type='text', tabindex=1, placeholder='&nbsp;')
+                label.form-row__label(for='inputEmail') E-mail/Номер счета
+                span.form-row__hint Helper text
+            .form-row
+                input#inputPassword.form-row__input.js-password(type='password', tabindex=2, placeholder='&nbsp;')
+                label.form-row__label(for='inputPassword') Пароль
+                label.button.button_icon(role='button')
+                    input.button__checkbox.js-show-pass(type='checkbox', checked=false)
+                    +icon('pass-hidden')
+                    +icon('pass-visible')
+            .form-row
+                button.button.button_login(type='submit', tabindex=3) Войти
+
+    section.payment-methods
+        h2.payment-methods__title Способы оплаты
+        .payment-methods-list
+            .payment-methods-list__inner
+                each method in paymentMethods
+                    a.payment-method(href='#')
+                        img.payment-method__logo(src=method.logoSrc, alt=method.title, height=32)
+
+    ul.news-list
+        each item in news
+            li.news-list-item(class=item.isBig ? 'news-list-item_big' : '')
+                a.news-list-item__link(href='#')
+                    picture.news-list-item__photo
+                        source(media='(min-width: 600px)', srcset=item.photoSrc)
+                        img.news-list-item__img(src=item.photoSrcM, alt=item.photoAltText)
+                    .news-list-item__descr
+                        p.news-list-item__date!=item.date
+                        p.news-list-item__title!=item.title

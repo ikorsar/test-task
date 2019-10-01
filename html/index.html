@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Developer Test Task</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../media/styles/styles.min.css">
+    <script src="../media/scripts/scripts.js"></script>
+  </head>
+  <body>
+    <section class="main" role="main">
+      <form class="form-auth" action="#" autocomplete="off">
+        <div class="form-auth__wrapper">
+          <div class="form-row">
+            <input class="form-row__input" id="inputEmail" type="text" tabindex="1" placeholder="&amp;nbsp;">
+            <label class="form-row__label" for="inputEmail">E-mail/Номер счета</label><span class="form-row__hint">Helper text</span>
+          </div>
+          <div class="form-row">
+            <input class="form-row__input js-password" id="inputPassword" type="password" tabindex="2" placeholder="&amp;nbsp;">
+            <label class="form-row__label" for="inputPassword">Пароль</label>
+            <label class="button button_icon" role="button">
+              <input class="button__checkbox js-show-pass" type="checkbox">
+              <svg class="icon icon_pass-hidden ">
+                <use xlink:href="../media/images/sprite.svg#pass-hidden"></use>
+              </svg>
+              <svg class="icon icon_pass-visible ">
+                <use xlink:href="../media/images/sprite.svg#pass-visible"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="form-row">
+            <button class="button button_login" type="submit" tabindex="3">Войти</button>
+          </div>
+        </div>
+      </form>
+      <section class="payment-methods">
+        <h2 class="payment-methods__title">Способы оплаты</h2>
+        <div class="payment-methods-list">
+          <div class="payment-methods-list__inner"><a class="payment-method" href="#"><img class="payment-method__logo" src="../files/logo-qiwi@2x.png" alt="Qiwi" height="32"></a><a class="payment-method" href="#"><img class="payment-method__logo" src="../files/logo-beeline@2x.png" alt="Beeline" height="32"></a><a class="payment-method" href="#"><img class="payment-method__logo" src="../files/logo-megafon@2x.png" alt="Megafon" height="32"></a><a class="payment-method" href="#"><img class="payment-method__logo" src="../files/logo-mts@2x.png" alt="MTS" height="32"></a><a class="payment-method" href="#"><img class="payment-method__logo" src="../files/logo-tele2@2x.png" alt="Tele2" height="32"></a>
+          </div>
+        </div>
+      </section>
+      <ul class="news-list">
+        <li class="news-list-item news-list-item_big"><a class="news-list-item__link" href="#">
+            <picture class="news-list-item__photo">
+              <source media="(min-width: 600px)" srcset="../files/news1.jpg"><img class="news-list-item__img" src="../files/news1-m.jpg" alt="Доход по-итальянски. 3 огненные ставки на тур Серии А">
+            </picture>
+            <div class="news-list-item__descr">
+              <p class="news-list-item__date">11:24, 19&nbsp;октября 2018</p>
+              <p class="news-list-item__title">Доход по-итальянски.&nbsp;3&nbsp;огненные ставки на&nbsp;тур Серии&nbsp;А</p>
+            </div></a></li>
+        <li class="news-list-item"><a class="news-list-item__link" href="#">
+            <picture class="news-list-item__photo">
+              <source media="(min-width: 600px)" srcset="../files/newsSmall1.jpg"><img class="news-list-item__img" src="../files/newsSmall1-m.jpg" alt="Фернандеш обиделся на &quot;Локомотив&quot;">
+            </picture>
+            <div class="news-list-item__descr">
+              <p class="news-list-item__date">11:24, 19&nbsp;октября 2018</p>
+              <p class="news-list-item__title">Фернандеш обиделся на&nbsp;&ldquo;Локомотив&rdquo;</p>
+            </div></a></li>
+        <li class="news-list-item"><a class="news-list-item__link" href="#">
+            <picture class="news-list-item__photo">
+              <source media="(min-width: 600px)" srcset="../files/newsSmall2.jpg"><img class="news-list-item__img" src="../files/newsSmall2-m.jpg" alt="Фернандеш обиделся на &quot;Локомотив&quot;">
+            </picture>
+            <div class="news-list-item__descr">
+              <p class="news-list-item__date">11:24, 19&nbsp;октября 2018</p>
+              <p class="news-list-item__title">Фернандеш обиделся на&nbsp;&ldquo;Локомотив&rdquo;</p>
+            </div></a></li>
+      </ul>
+    </section>
+  </body>
+</html>

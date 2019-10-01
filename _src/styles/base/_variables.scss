@@ -1,0 +1,88 @@
+$colorPrimary: #2a2f34;
+$colorSecondary: #f7ca18;
+
+$colorPrimaryLighten30: #6d7a87;
+$colorPrimaryLighten50: #a6afb7;
+$colorPrimaryLighten75: #ebedef;
+
+$colorActive: $colorSecondary;
+$colorError: #e20613;
+$colorSuccess: #2ecc71;
+
+$colorBlack: #000;
+$colorWhite: #fff;
+$colorGrey: #f4f5f6;
+
+$linkColor: $colorBlack;
+$linkHoverColor: $colorPrimary;
+$linkBorderHoverColor: rgba($colorPrimary, 0.3);
+
+$colorText: $colorBlack;
+$placeholderColor: lighten($colorPrimary, 0.3);
+
+$rem-base: 16px !default;
+$font: 'Roboto', Helvetica, Arial, sans-serif;
+
+$animationTime: 0.15s;
+$animationFunc: ease-in-out;
+
+$phone: 800px;
+$tablet: 900px;
+$desktop: 1100px;
+$desktopBig: 1400px;
+
+// media queries
+
+@mixin for-phone-only {
+    @media (max-width: #{$phone - 1}) {
+        @content;
+    }
+}
+
+@mixin for-phone-landscape-only {
+    @media (min-width: 400px) and (max-width: #{$phone - 1}) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-up {
+    @media (min-width: #{$phone}) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-only {
+    @media (min-width: #{$phone}) and (max-width: #{$tablet - 1}) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-up {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-only {
+    @media (min-width: #{$tablet}) and (max-width: #{$desktop - 1}) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin for-desktop-only {
+    @media (min-width: #{$desktop}) and (max-width: #{$desktopBig - 1}) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: #{$desktopBig}) {
+        @content;
+    }
+}

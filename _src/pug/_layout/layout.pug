@@ -1,0 +1,15 @@
+mixin icon(name,mod)
+    - mod = mod || ''
+    svg(class='icon icon_' + name + ' ' + mod)
+        use(xlink:href='../media/images/sprite.svg#' + name)
+
+include ../data/common
+
+block variables
+
+doctype html
+html(lang="ru")
+    include ../_parts/_head
+    body
+        section.main(role='main')
+            block body

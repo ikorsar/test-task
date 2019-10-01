@@ -1,0 +1,18 @@
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    vertical-align: middle;
+    position: relative;
+    transition: fill $animationTime $animationFunc;
+}
+
+.icon_pass-hidden {
+    height: 16px;
+    width: 16px;
+}
+.icon_pass-visible {
+    height: 16px;
+    width: 16px;
+}

@@ -1,0 +1,35 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    font-size: $rem-base;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $font;
+    min-height: 100%;
+    color: $colorText;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    background-color: #eee;
+}
+
+.main {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $colorWhite;
+
+    @include for-tablet-portrait-up {
+        box-shadow: 0 0 0 1px #dedede;
+        margin-top: 67px;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+}
